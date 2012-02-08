@@ -1,0 +1,2 @@
+export PATH=$PATH:/usr/lib/jvm/java-6-sun/jre/bin:/opt/android-sdk/tools
+export JAVA_HOME=/usr/lib/jvm/java-6-sun/jre

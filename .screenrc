@@ -1,0 +1,23 @@
+termcapinfo xterm* ti@:te@
+defutf8 on
+altscreen on
+defscrollback 10000
+
+vbell off
+startup_message off
+
+#term screen
+#terminfo screen 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
+
+caption always "%{kw} %-w%{wk} %n %t %{-}%+w %=%{c}%{k}[ %H ]  %d.%m.%Y %c:%s"
+
+screen -t "projects" mc /home/arts/projects
+screen -t "mc" mc
+screen -t "root" sudo su
+screen -t "mc" mc
+screen -t "bash"
+
+#bind \011 windowlist -b
+
+bind h screen -t "htop" htop
+bind M screen -t "mc" mc
