@@ -102,7 +102,7 @@ hi ModeMsg         guifg=#E6DB74
 hi MoreMsg         guifg=#E6DB74
 
 " Completion Menu {{{
-hi Pmenu           guifg=#cccccc guibg=#232728
+hi Pmenu           guifg=#cccccc guibg=#666666
 hi PmenuSel        guifg=#000000 guibg=#cccccc
 hi PmenuSbar                     guibg=#131414
 hi PmenuThumb      guifg=#777777
