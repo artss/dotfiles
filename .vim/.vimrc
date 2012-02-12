@@ -151,7 +151,7 @@ call SMap("<F2>", ":w<cr>")
 call SMap("<F4>", ":NERDTreeToggle<cr>")
 
 " toggle bufexplorer
-call SMap("<F5>", ":BufExplorerHorizontalSplit<cr>:resize 10<cr>")
+call SMap("<F5>", ":BufExplorerHorizontalSplit<cr>:resize 15<cr>")
 
 " kill buffer
 call SMap("<F10>", ":bd<cr>")
