@@ -1,0 +1,5 @@
+/* XPM */
+static char * title_4_inactive_xpm[] = {
+"5 1 2 1",
+".	c #FFFFFF s inactive_mid_1",
+"....."};
