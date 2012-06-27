@@ -1,0 +1,7 @@
+# udev rules file for madwimax supported devices
+SUBSYSTEM!="usb|usb_device", GOTO="madwimax_rules_end"
+ACTION!="add", GOTO="madwimax_rules_end"
+
+ATTR{idVendor}=="04e8", ATTR{idProduct}=="6761", RUN+="//sbin/madwimax -qd --exact-device=$attr{busnum}/$attr{devnum}"
+ATTR{idVendor}=="04e9", ATTR{idProduct}=="6761", RUN+="//sbin/madwimax -qd --exact-device=$attr{busnum}/$attr{devnum}"
+LABEL="madwimax_rules_end"
