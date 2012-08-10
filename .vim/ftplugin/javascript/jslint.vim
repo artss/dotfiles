@@ -57,8 +57,13 @@ noremap <buffer><silent> <C-R> <C-R>:JSLintUpdate<CR>
 
 " Set up command and parameters
 if has("win32")
-  let s:cmd = 'cscript /NoLogo '
-  let s:runjslint_ext = 'wsf'
+  if executable('node')
+    let s:cmd = 'node'
+    let s:runjslint_ext = 'js'
+  else
+    let s:cmd = 'cscript /NoLogo '
+    let s:runjslint_ext = 'wsf'
+  endif
 else
   let s:runjslint_ext = 'js'
   if exists("$JS_CMD")
