@@ -1,0 +1,5 @@
+dir=`dirname $0`
+dir=`realpath $dir`
+host=`basename $dir`
+
+sshfs $host:/ $dir -o nonempty
