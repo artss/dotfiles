@@ -84,8 +84,10 @@ highlight Trailing ctermbg=darkgray guibg=gray8
 au BufNewFile,BufRead,WinEnter * let b:mtrailingws=matchadd('Trailing', '\s\+$', -1)
 
 """ hightlight long lines
-highlight LongLine ctermbg=darkred guibg=darkred
-au BufNewFile,BufRead,WinEnter * let b:mlonglines=matchadd('LongLine', '\%>79v.\+', -1)
+"highlight LongLine ctermbg=darkred guibg=darkred
+"au BufNewFile,BufRead,WinEnter * let b:mlonglines=matchadd('LongLine', '\%>79v.\+', -1)
+hi ColorColumn guibg=#181a1b
+au BufNewFile,BufRead,WinEnter * set colorcolumn=80
 
 """ autocomplete
 function! InsertTabWrapper()
