@@ -67,7 +67,8 @@ if has('gui')
     "winsize 212 84
     colorscheme molokai
     if has('win32')
-        set guifont=Lucida_Console:h10:cRUSSIAN::
+        "set guifont=Lucida_Console:h10:cRUSSIAN::
+        set guifont=terminus-cp1251
     else
         set guifont=Terminus\ 9
     endif
@@ -116,7 +117,7 @@ set go+=a
 set foldcolumn=2
 set foldmethod=indent
 
-let NERDTreeIgnore=['.*\.pyc$']
+let NERDTreeIgnore=['.*\.pyc$', 'System Volume Information', '\$RECYCLE.BIN', 'desktop.ini']
 
 
 
