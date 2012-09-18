@@ -26,7 +26,7 @@ hi VertSplit       guifg=#AAAAAA guibg=#666666 gui=none
 hi Search          guifg=#000000 guibg=#E4E500
 hi IncSearch       guibg=#000000 guifg=#FF8D00
 hi Operator        guifg=#A6A22E
-hi MatchParen      guifg=#ffec00 guibg=#232728 gui=none
+hi MatchParen      guifg=#232728 guibg=#ffec00 gui=none
 
 " }}}
 " Syntax {{{
