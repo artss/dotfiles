@@ -128,8 +128,8 @@ free_space=1
 [Misc]
 ftpfs_password=anonymous@
 ftp_proxy_host=gate
-display_codepage=KOI8-R
-source_codepage=KOI8-R
+display_codepage=UTF-8
+source_codepage=UTF-8
 
 find_ignore_dirs=
 
