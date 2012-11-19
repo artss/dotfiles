@@ -1,11 +1,8 @@
 [web]
 cacerts=
 
-[hostfingerprints]
-d.psto.net=8a:6a:26:4b:ec:48:62:97:08:9a:63:e1:e7:56:fe:d6:2b:2b:2a:90
-
 [ui]
-username = Arts <arts@stickerity.com>
+username = Arts <arts@psto.net>
 verbose = True
 
 [pager]
