@@ -158,3 +158,7 @@ call SMap("<F5>", ":BufExplorerHorizontalSplit<cr>:resize 15<cr>")
 
 " kill buffer
 call SMap("<F10>", ":bd<cr>")
+
+if filereadable(glob("~/.vimrc.local")) 
+    source ~/.vimrc.local
+endif
