@@ -9,6 +9,7 @@ if [ "x$windowid" != "x" ]; then
     if [ "x$isunmapped" != "x" ]; then
         xdotool windowmap $windowid
         xdotool windowsize $windowid 1920 1080
+        xdotool windowraise $windowid
     else
         xdotool windowunmap $windowid
     fi
