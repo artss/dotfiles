@@ -10,7 +10,7 @@ startup_message off
 #term screen
 terminfo screen 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
 
-caption always "%{kw} %-w%{wk} %n %t %{-}%+w %=%{c}%{k}[ %H ]  %d.%m.%Y %c:%s"
+caption always "[ %H ] %{kw} %-w%{wk} %n %t %{-}%+w %=%{c}%{k} %d.%m.%Y %c:%s"
 
 screen -t "projects" mc /home/arts/projects
 screen -t "mc" mc
