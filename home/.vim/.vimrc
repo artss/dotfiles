@@ -63,6 +63,13 @@ set listchars=tab:▸\ ",eol:¬
 
 nnoremap ; :
 
+set history=64
+set undolevels=128
+set undodir=~/.vim/undo/
+set undofile
+set undolevels=1000
+set undoreload=10000
+
 if has('gui')
     "winsize 212 84
     colorscheme molokai
