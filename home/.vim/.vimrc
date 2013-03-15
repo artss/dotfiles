@@ -166,6 +166,16 @@ call SMap("<F5>", ":BufExplorerHorizontalSplit<cr>:resize 15<cr>")
 " kill buffer
 call SMap("<F10>", ":bd<cr>")
 
+""" Local settings
 if filereadable(glob("~/.vimrc.local")) 
     source ~/.vimrc.local
 endif
+
+""" Project specific settings
+function! ProjectEnv()
+    if filereadable(glob("./.vimrc"))
+        source ./.vimrc
+    endif
+endfunction
+autocmd! BufReadPost,BufNewFile * call ProjectEnv()
+
