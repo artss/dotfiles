@@ -1,0 +1,6 @@
+include "/usr/share/X11/locale/en_US.UTF-8/Compose"
+
+<Multi_key> <Cyrillic_BE> <Cyrillic_BE>     : "«"   guillemotleft # LEFT-POINTING DOUBLE ANGLE QUOTATION MARK
+<Multi_key> <Cyrillic_YU> <Cyrillic_YU>     : "»"   guillemotright # RIGHT-POINTING DOUBLE ANGLE QUOTATION MARK
+<Multi_key> <comma> <comma>                 : "«"   guillemotleft # LEFT-POINTING DOUBLE ANGLE QUOTATION MARK
+<Multi_key> <period> <period>               : "»"   guillemotright # RIGHT-POINTING DOUBLE ANGLE QUOTATION MARK
