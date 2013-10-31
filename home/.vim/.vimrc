@@ -124,6 +124,10 @@ set go+=a
 set foldcolumn=2
 set foldmethod=indent
 
+""" indentation
+vnoremap < <gv
+vnoremap > >gv
+
 let NERDTreeIgnore=['.*\.pyc$', 'System Volume Information', '\$RECYCLE.BIN', 'desktop.ini']
 
 
