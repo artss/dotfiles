@@ -124,6 +124,10 @@ set go+=a
 set foldcolumn=2
 set foldmethod=indent
 
+""" indentation
+vnoremap < <gv
+vnoremap > >gv
+
 let NERDTreeIgnore=['.*\.pyc$', 'System Volume Information', '\$RECYCLE.BIN', 'desktop.ini']
 
 
@@ -162,6 +166,9 @@ call SMap("<F4>", ":NERDTreeToggle<cr>")
 
 " toggle bufexplorer
 call SMap("<F5>", ":BufExplorerHorizontalSplit<cr>:resize 15<cr>")
+
+" toggle tagbar
+call SMap("<F7>", ":TagbarToggle<cr>")
 
 " kill buffer
 call SMap("<F10>", ":bd<cr>")
