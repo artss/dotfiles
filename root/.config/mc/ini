@@ -7,6 +7,8 @@ color_terminals=
 
 linux=
 
+screen=
+
 [Midnight-Commander]
 preserve_uidgid=0
 show_backups=1
@@ -64,7 +66,7 @@ fish_directory_timeout=900
 editor_word_wrap_line_length=72
 editor_key_emulation=0
 editor_tab_spacing=4
-editor_fill_tabs_with_spaces=0
+editor_fill_tabs_with_spaces=1
 editor_return_does_auto_indent=1
 editor_backspace_through_tabs=0
 editor_fake_half_tabs=0
@@ -75,7 +77,6 @@ editor_option_typewriter_wrap=0
 editor_edit_confirm_save=1
 editor_syntax_highlighting=1
 nice_rotating_dash=1
-horizontal_split=0
 mcview_remember_file_position=0
 editor_backup_extension=~
 editor_persistent_selections=1
@@ -111,9 +112,11 @@ keymap=mc.keymap
 
 filepos_max_saved_entries=1024
 
+preallocate_space=0
+editor_group_undo=0
+skin=default
+
 [Layout]
-equal_split=1
-first_panel_size=106
 message_visible=0
 keybar_visible=0
 xterm_title=1
@@ -125,10 +128,16 @@ permission_mode=1
 filetype_mode=1
 free_space=1
 
+horizontal_split=0
+vertical_equal=1
+left_panel_size=159
+horizontal_equal=1
+top_panel_size=106
+
 [Misc]
 ftpfs_password=anonymous@
 ftp_proxy_host=gate
-display_codepage=KOI8-R
+display_codepage=UTF-8
 source_codepage=KOI8-R
 
 find_ignore_dirs=
@@ -160,6 +169,9 @@ permission_mode=false
 quick_search_mode=2
 
 simple_swap=false
+
+show_mini_info=true
+torben_fj_mode=false
 
 [Panelize]
 Найти корректуры, отвергнутые командой patch=find . -name \\*.rej -print
