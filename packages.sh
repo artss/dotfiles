@@ -8,6 +8,7 @@ convmv \
 curl \
 dkms \
 dosfstools \
+exuberant-ctags \
 firefox \
 gimp \
 git-core \
