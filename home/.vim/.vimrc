@@ -173,6 +173,9 @@ call SMap("<F7>", ":TagbarToggle<cr>")
 " kill buffer
 call SMap("<F10>", ":bd<cr>")
 
+" next buffer
+call SMap("<C-Tab>", ":w<cr>")
+
 """ Local settings
 if filereadable(glob("~/.vimrc.local")) 
     source ~/.vimrc.local

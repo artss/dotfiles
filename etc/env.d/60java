@@ -1,2 +1,2 @@
-export PATH=$PATH:/usr/lib/jvm/java-6-openjdk-amd64/jre/bin:/opt/adt-bundle-linux-x86_64/sdk/platform-tools
-export JAVA_HOME=/usr/lib/jvm/java-6-openjdk-amd64/jre
+export PATH=$PATH:/usr/lib/jvm/jdk1.7.0_17/jre/bin:/opt/android-sdk/tools
+export JAVA_HOME=/usr/lib/jvm/jdk1.7.0_17/jre
