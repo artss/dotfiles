@@ -1,0 +1,12 @@
+#!/bin/sh
+
+case "${1}" in
+        hibernate)
+        # nothing
+                ;;
+        resume|thaw)
+        # turn on keyboard backlight
+                /etc/acpi/asus-keyboard-backlight.sh
+                ;;
+esac
+
