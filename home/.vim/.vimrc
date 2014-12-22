@@ -130,7 +130,19 @@ vnoremap > >gv
 
 let NERDTreeIgnore=['.*\.pyc$', 'System Volume Information', '\$RECYCLE.BIN', 'desktop.ini']
 
+""" arduino
 
+au BufRead,BufNewFile *.ino set filetype=arduino
+let g:vim_arduino_library_path = "/usr/share/arduino"
+let g:vim_arduino_serial_port = "/dev/ttyACM0"
+
+au BufRead,BufNewFile *.pegjs setfiletype pegjs
+
+let g:CSSLint_FileTypeList = ['css', 'less', 'scss']
+
+let g:user_emmet_install_global = 0
+autocmd FileType html,css EmmetInstall
+let g:user_emmet_leader_key='<C-Z>'
 
 """ keymaps
 
