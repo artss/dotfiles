@@ -21,4 +21,4 @@ screen -t "bash"
 #bind \011 windowlist -b
 
 bind h screen -t "htop" htop
-bind M screen -t "mc" mc
+bind M screen -t "mc" mc -d
