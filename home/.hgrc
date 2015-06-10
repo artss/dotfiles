@@ -10,3 +10,4 @@ pager = most
 
 [extensions]
 pager =
+hgk =
