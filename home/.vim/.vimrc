@@ -15,6 +15,7 @@ set expandtab
 
 set encoding=utf-8
 set autoindent
+set smartindent
 set showmode
 set showcmd
 set hidden
@@ -59,7 +60,7 @@ set guioptions-=L
 set guioptions+=c
 
 set list
-set listchars=tab:▸\ ",eol:¬
+set listchars=tab:\|\ ",eol:¬
 
 nnoremap ; :
 
