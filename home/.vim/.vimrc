@@ -99,8 +99,9 @@ set undofile
 set undolevels=1000
 set undoreload=10000
 
+set nowrap
 set list
-set listchars=tab:\|\ ",eol:¬,trail:·
+set listchars=tab:┊\ ,trail:·,extends:→,precedes:←
 
 set t_Co=256
 colorscheme solarized
@@ -124,27 +125,6 @@ au BufNewFile,BufRead,WinEnter * let b:mtrailingws=matchadd('Trailing', '\s\+$',
 """ hightlight long lines
 highlight ColorColumn guibg=#00242f
 au BufNewFile,BufRead,WinEnter * set colorcolumn=80
-
-"""
-""" autocomplete
-"""
-
-"function! InsertTabWrapper()
-"    let col = col('.') - 1
-"    if !col || getline('.')[col - 1] !~ '\k'
-"        return "\<tab>"
-"    else
-"        return "\<c-p>"
-"    endif
-"endfunction
-"imap <tab> <c-r>=InsertTabWrapper()<cr>
-
-"set complete=""
-"set complete+=.
-"set complete+=b
-
-"set completeopt-=preview
-"set completeopt+=longest
 
 """ selection
 set clipboard+=unnamed
