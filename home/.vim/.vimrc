@@ -260,3 +260,7 @@ call SMap("<F10>", ":bd<cr>")
     let g:UltiSnipsListSnippets = "<c-l>"
     let g:UltiSnipsEditSplit = "vertical"
 
+""" nerdcommenter
+    nmap <c-c> <leader>c<space>
+    vmap <c-c> <leader>c<space>
+
