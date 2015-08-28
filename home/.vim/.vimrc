@@ -221,6 +221,7 @@ vnoremap > >gv
 
 """ NERDTree
     let g:NERDTreeWinSize=50
+    let NERDTreeIgnore=['.*\.pyc$', 'System Volume Information', '\$RECYCLE.BIN', 'desktop.ini']
 
 """ Emmet
     let g:user_emmet_install_global = 0
