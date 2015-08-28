@@ -21,6 +21,7 @@ filetype off
     Bundle 'SirVer/ultisnips'
     Bundle 'honza/vim-snippets'
     Bundle 'scrooloose/nerdcommenter'
+    Bundle 'wavded/vim-stylus'
 
     " vim/scripts repos
     "Bundle 'L9'
