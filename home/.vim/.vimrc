@@ -259,3 +259,11 @@ vnoremap > >gv
     "vmap <c-c> <leader>c<space>
     call SMap('<c-c>', '<leader>c<space>')
 
+""" Project specific settings
+    function! ProjectEnv()
+        if filereadable(glob('./.vimrc'))
+            source ./.vimrc
+        endif
+    endfunction
+    autocmd! BufReadPost,BufNewFile * call ProjectEnv()
+
