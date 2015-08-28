@@ -13,7 +13,6 @@ filetype off
     Bundle 'scrooloose/nerdtree'
     Bundle 'jlanzarotta/bufexplorer'
     Bundle 'bling/vim-airline'
-    Bundle 'vim-scripts/molokai'
     Bundle 'altercation/vim-colors-solarized'
     Bundle 'mattn/emmet-vim'
     Bundle 'scrooloose/syntastic'
@@ -21,6 +20,7 @@ filetype off
     Bundle 'ervandew/supertab'
     Bundle 'SirVer/ultisnips'
     Bundle 'honza/vim-snippets'
+    Bundle 'scrooloose/nerdcommenter'
 
     " vim/scripts repos
     "Bundle 'L9'
@@ -254,8 +254,9 @@ call SMap("<F10>", ":bd<cr>")
     let g:airline_symbols.linenr = '|'
 
 """ UltiSnips
-    let g:UltiSnipsExpandTrigger="<tab>"
-    let g:UltiSnipsJumpForwardTrigger="<tab>"
-    let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
-    let g:UltiSnipsListSnippets="<c-l>"
-    let g:UltiSnipsEditSplit="vertical"
+    let g:UltiSnipsExpandTrigger = "<tab>"
+    let g:UltiSnipsJumpForwardTrigger = "<tab>"
+    let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
+    let g:UltiSnipsListSnippets = "<c-l>"
+    let g:UltiSnipsEditSplit = "vertical"
+
