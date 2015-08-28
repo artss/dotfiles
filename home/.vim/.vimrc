@@ -106,6 +106,8 @@ set listchars=tab:┊\ ,trail:·,extends:→,precedes:←
 set t_Co=256
 colorscheme solarized
 set background=dark
+let g:solarized_contrast = 1
+let g:solarized_underline = 0
 
 if has('gui')
     "winsize 212 84
@@ -140,51 +142,61 @@ vnoremap < <gv
 
 vnoremap > >gv
 
-"""
 """ Keymaps
-"""
-
-" More suitable mapping
-function! SMap(key, action, ...)
-    let modes = " vi"
-    if (a:0 > 0)
-        let modes = a:{1}
-    endif
-    if (match(modes, '\Ii') != -1)
-        execute 'imap ' . a:key . ' <Esc>' . a:action
-    endif
-    if (match(modes, '\Nn') != -1)
-        execute 'nmap ' . a:key . ' <Esc>' . a:action
-    endif
-    if (match(modes, ' ') != -1)
-        execute 'map ' . a:key . ' <Esc>' . a:action
-    endif
-    if (match(modes, '\Vv') != -1)
-        execute 'vmap ' . a:key . ' <Esc>' . a:action
-    endif
-endfunction
+    " More suitable mapping
+    function! SMap(key, action, ...)
+        let modes = ' vi'
+        if (a:0 > 0)
+            let modes = a:{1}
+        endif
+        if (match(modes, '\Ii') != -1)
+            execute 'imap ' . a:key . ' <Esc>' . a:action
+        endif
+        if (match(modes, '\Nn') != -1)
+            execute 'nmap ' . a:key . ' <Esc>' . a:action
+        endif
+        if (match(modes, ' ') != -1)
+            execute 'map ' . a:key . ' <Esc>' . a:action
+        endif
+        if (match(modes, '\Vv') != -1)
+            execute 'vmap ' . a:key . ' <Esc>' . a:action
+        endif
+    endfunction
 
 
-" disable F1
-call SMap("<F1>", ":<ESC>")
+    " disable F1
+    call SMap('<F1>', ':<ESC>')
 
-" save on F2
-call SMap("<F2>", ":w<cr>")
+    " save on F2
+    call SMap('<F2>', ':w<cr>')
 
-" toggle nerdtree
-call SMap("<F4>", ":NERDTreeToggle<cr>")
+    " toggle nerdtree
+    call SMap('<F4>', ':NERDTreeToggle<cr>')
 
-" toggle bufexplorer
-call SMap("<F5>", ":BufExplorerHorizontalSplit<cr>:resize 15<cr>")
+    " toggle bufexplorer
+    call SMap('<F5>', ':BufExplorerHorizontalSplit<cr>:resize 15<cr>')
 
-" toggle tagbar
-"call SMap("<F7>", ":TagbarToggle<cr>")
+    " toggle tagbar
+    "call SMap('<F7>', ':TagbarToggle<cr>')
 
-" kill buffer
-call SMap("<F10>", ":bd<cr>")
+    " kill buffer
+    call SMap('<F10>', ':bd<cr>')
 
-" next buffer
-"call SMap("<C-Tab>", ":w<cr>")
+    " alt + number
+    let i = 1
+    while i <= 9
+        call SMap('<a-' . i . '>', ':' . i . 'wincmd w<cr>')
+        let i = i + 1
+    endwhile
+
+    " next buffer
+    call SMap('<c-tab>', '<c-w>w')
+
+    " resize current window
+    call SMap('<a-down>', '<C-W>-')
+    call SMap('<a-up>', '<C-W>+')
+    call SMap('<a-left>', '<C-W><')
+    call SMap('<a-right>', '<C-W>>')
 
 """ Syntastic
     set statusline+=%#warningmsg#
@@ -202,10 +214,10 @@ call SMap("<F10>", ":bd<cr>")
     let g:syntastic_javascript_checkers = ['eslint']
 
     " next error
-    call SMap("<A-n>", ":lnext<cr>")
+    call SMap('<a-n>', ':lnext<cr>')
 
     " previous error
-    call SMap("<A-p>", ":lprevious<cr>")
+    call SMap('<a-p>', ':lprevious<cr>')
 
 """ NERDTree
     let g:NERDTreeWinSize=50
@@ -225,7 +237,7 @@ call SMap("<F10>", ":bd<cr>")
     let g:jsdoc_access_descriptions = 1
     let g:jsdoc_underscore_private = 1
 
-    call SMap("<C-j>", ":JsDoc<cr>")
+    call SMap('<c-j>', ':JsDoc<cr>')
 
 """ Airline
     let g:airline_powerline_fonts = 1
@@ -235,13 +247,14 @@ call SMap("<F10>", ":bd<cr>")
     let g:airline_symbols.linenr = '|'
 
 """ UltiSnips
-    let g:UltiSnipsExpandTrigger = "<tab>"
-    let g:UltiSnipsJumpForwardTrigger = "<tab>"
-    let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
-    let g:UltiSnipsListSnippets = "<c-l>"
-    let g:UltiSnipsEditSplit = "vertical"
+    let g:UltiSnipsExpandTrigger = '<tab>'
+    let g:UltiSnipsJumpForwardTrigger = '<tab>'
+    let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
+    let g:UltiSnipsListSnippets = '<c-l>'
+    let g:UltiSnipsEditSplit = 'vertical'
 
 """ nerdcommenter
-    nmap <c-c> <leader>c<space>
-    vmap <c-c> <leader>c<space>
+    "nmap <c-c> <leader>c<space>
+    "vmap <c-c> <leader>c<space>
+    call SMap('<c-c>', '<leader>c<space>')
 
