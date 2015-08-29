@@ -21,6 +21,7 @@ filetype off
     Bundle 'SirVer/ultisnips'
     Bundle 'honza/vim-snippets'
     Bundle 'scrooloose/nerdcommenter'
+    Bundle 'Raimondi/delimitMate'
     Bundle 'wavded/vim-stylus'
     Bundle 'krisajenkins/vim-pipe'
 
