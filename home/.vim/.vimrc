@@ -10,7 +10,6 @@ filetype off
     call vundle#rc()
 
     " github repos
-    Bundle 'mhinz/vim-startify'
     Bundle 'scrooloose/nerdtree'
     Bundle 'jlanzarotta/bufexplorer'
     Bundle 'bling/vim-airline'
@@ -23,6 +22,7 @@ filetype off
     Bundle 'honza/vim-snippets'
     Bundle 'scrooloose/nerdcommenter'
     Bundle 'wavded/vim-stylus'
+    Bundle 'krisajenkins/vim-pipe'
 
     " vim/scripts repos
     "Bundle 'L9'
@@ -245,8 +245,8 @@ vnoremap > >gv
     let g:airline_powerline_fonts = 1
     let g:airline_left_sep = ''
     let g:airline_right_sep = ''
-    let g:airline_symbols.space = ' '
-    let g:airline_symbols.linenr = '|'
+    let g:airline_space = ' '
+    let g:airline_linenr = '|'
 
 """ UltiSnips
     let g:UltiSnipsExpandTrigger = '<tab>'
@@ -261,14 +261,16 @@ vnoremap > >gv
     call SMap('<c-c>', '<leader>c<space>')
 
 """ startify
-    let g:startify_files_number = 3
+    "let g:startify_files_number = 3
 
 """ Project specific settings
-    function! ProjectEnv()
-        if filereadable(glob('./.vimrc'))
-            source ./.vimrc
-        endif
-    endfunction
-    autocmd! BufReadPost,BufNewFile * call ProjectEnv()
+    if !exists('*ProjectEnv')
+        function! ProjectEnv()
+            if filereadable(glob('./.vimrc'))
+                source ./.vimrc
+            endif
+        endfunction
+        autocmd! BufReadPost,BufNewFile * call ProjectEnv()
+    endif
     "set exrc
 
