@@ -10,6 +10,7 @@ filetype off
     call vundle#rc()
 
     " github repos
+    Bundle 'mhinz/vim-startify'
     Bundle 'scrooloose/nerdtree'
     Bundle 'jlanzarotta/bufexplorer'
     Bundle 'bling/vim-airline'
@@ -259,6 +260,9 @@ vnoremap > >gv
     "vmap <c-c> <leader>c<space>
     call SMap('<c-c>', '<leader>c<space>')
 
+""" startify
+    let g:startify_files_number = 3
+
 """ Project specific settings
     function! ProjectEnv()
         if filereadable(glob('./.vimrc'))
@@ -266,4 +270,5 @@ vnoremap > >gv
         endif
     endfunction
     autocmd! BufReadPost,BufNewFile * call ProjectEnv()
+    "set exrc
 
