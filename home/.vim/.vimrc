@@ -23,6 +23,7 @@ filetype off
     Bundle 'scrooloose/nerdcommenter'
     Bundle 'Raimondi/delimitMate'
     Bundle 'wavded/vim-stylus'
+    Bundle 'evidens/vim-twig'
     Bundle 'krisajenkins/vim-pipe'
 
     " vim/scripts repos
