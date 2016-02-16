@@ -1,6 +1,5 @@
 #!/bin/sh
 apt-get install \
-alsa-utils \
 bpython \
 build-essential \
 checkinstall \
@@ -25,27 +24,18 @@ libreoffice-writer \
 mc \
 mercurial \
 most \
-mplayer \
 openssh-server \
 pmount \
-psi-plus \
-python-gevent \
-python-httplib2 \
-python-imaging \
-python-lxml \
-python-numpy \
-python-setproctitle \
-python-twisted \
-python-tz \
+psi-plus-webkit \
+python-dev \
 python-virtualenv \
-python3-software-properties \
 qt4-qtconfig \
 realpath \
-screen \
 sox \
 sqlite3 \
 sshfs \
 thunderbird \
+tmux \
 traceroute \
 ttf-dejavu-core \
 ttf-droid \
@@ -54,6 +44,7 @@ unrar \
 unzip \
 vim-gtk \
 wget \
+xdotool \
 xfonts-terminus \
 zenity \
 zenmap \
