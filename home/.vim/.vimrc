@@ -228,7 +228,7 @@ vnoremap > >gv
 
 """ Emmet
     let g:user_emmet_install_global = 0
-    autocmd FileType html,css EmmetInstall
+    autocmd FileType html,html.twig,css EmmetInstall
     let g:user_emmet_leader_key='<C-Z>'
 
 """ JsDoc
