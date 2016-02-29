@@ -24,6 +24,8 @@ libreoffice-writer \
 mc \
 mercurial \
 most \
+nodejs \
+npm \
 openssh-server \
 pmount \
 psi-plus-webkit \
