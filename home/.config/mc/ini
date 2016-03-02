@@ -1,6 +1,6 @@
 
 [Colors]
-base_color=normal=brightgray,default:gauge=whte,default:marked=yellow,default:markselect=yellow,lightgray:selected=black,lightgray:directory=white,default:errors=red,default:executable=brightgreen,default:link=brightblue,default:stalelink=red,default:device=brightmagenta,default:special=brightcyan,default:core=lightgray,default:header=cyan,black:menunormal=white,black:menuhot=brightgreen,black:menusel=black,white:pmenunormal=white,black:pmenutitle=white,black:pmenuhot=brightgreen,black:pmenusel=black,white:editnormal=brightgray,black:editmarked=black,brightgreen:editbold=brightred,cyan:graph=white
+base_color=normal=brightgray,default:gauge=whte,default:marked=yellow,default:markselect=yellow,lightgray:selected=black,lightgray:directory=white,default:errors=red,default:executable=brightgreen,default:link=brightblue,default:stalelink=red,default:device=brightmagenta,default:special=brightcyan,default:core=lightgray,default:header=cyan,black:menunormal=white,black:menuhot=brightgreen,black:menusel=black,white:pmenunormal=white,black:pmenutitle=white,black:pmenuhot=brightgreen,black:pmenusel=black,white:editnormal=brightgray,default:editmarked=default,brightgreen:editbold=brightred,cyan:graph=white
 
 xterm=
 color_terminals=
