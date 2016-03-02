@@ -17,6 +17,7 @@ filetype off
     Bundle 'mattn/emmet-vim'
     Bundle 'scrooloose/syntastic'
     Bundle 'heavenshell/vim-jsdoc'
+    Bundle 'maksimr/vim-jsbeautify'
     Bundle 'ervandew/supertab'
     Bundle 'SirVer/ultisnips'
     Bundle 'honza/vim-snippets'
@@ -242,6 +243,21 @@ vnoremap > >gv
     let g:jsdoc_underscore_private = 1
 
     call SMap('<c-j>', ':JsDoc<cr>')
+
+""" JsBeautify
+    autocmd FileType javascript noremap <buffer> <c-f> :call JsBeautify()<cr>
+    autocmd FileType jsx noremap <buffer> <c-f> :call JsxBeautify()<cr>
+    autocmd FileType json noremap <buffer> <c-f> :call JsonBeautify()<cr>
+    autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
+    autocmd FileType html.twig noremap <buffer> <c-f> :call HtmlBeautify()<cr>
+    autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
+
+    autocmd FileType javascript vnoremap <buffer> <c-f> :call RangeJsBeautify()<cr>
+    autocmd FileType jsx vnoremap <buffer> <c-f> :call RangeJsxBeautify()<cr>
+    autocmd FileType json vnoremap <buffer> <c-f> :call RangeJsonBeautify()<cr>
+    autocmd FileType html vnoremap <buffer> <c-f> :call RangeHtmlBeautify()<cr>
+    autocmd FileType html.twig vnoremap <buffer> <c-f> :call RangeHtmlBeautify()<cr>
+    autocmd FileType css vnoremap <buffer> <c-f> :call RangeCSSBeautify()<cr>
 
 """ Airline
     let g:airline_powerline_fonts = 1
