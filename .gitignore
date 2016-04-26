@@ -2,3 +2,4 @@ home/.config/mc/panels.ini
 root/.config/mc/panels.ini
 *.pyc
 home/.vim/bundle
+home/.vim/.sessions

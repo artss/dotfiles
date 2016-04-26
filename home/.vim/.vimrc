@@ -26,6 +26,8 @@ filetype off
     Bundle 'wavded/vim-stylus'
     Bundle 'evidens/vim-twig'
     Bundle 'krisajenkins/vim-pipe'
+    Bundle 'vim-misc'
+    Bundle 'xolox/vim-session'
 
     " vim/scripts repos
     "Bundle 'L9'
@@ -280,6 +282,18 @@ vnoremap > >gv
 
 """ startify
     "let g:startify_files_number = 3
+
+""" vim-session
+
+let g:session_directory = '~/.vim/.sessions'
+let g:session_autoload = 'no'
+let g:session_autosave = 'yes'
+let g:session_command_aliases = 1
+
+nnoremap <leader>so :OpenSession 
+nnoremap <leader>ss :SaveSession 
+nnoremap <leader>sd :DeleteSession<cr>
+nnoremap <leader>sc :CloseSession<cr>
 
 """ Project specific settings
     if !exists('*ProjectEnv')
