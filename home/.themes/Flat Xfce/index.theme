@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=IrisLight
+Comment=A modern flat theme
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=IrisLight
+MetacityTheme=IrisLight
+ButtonLayout=:minimize,maximize,close
