@@ -24,6 +24,7 @@ alias etc='cd /etc'
 alias df='df -h'
 alias mc='mc -d'
 alias tmux='tmux -2'
+alias tm='tmux -2 attach'
 
 alias mi='speaker-test -t sine -f 329.6'
 
