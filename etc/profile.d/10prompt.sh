@@ -1,13 +1,13 @@
 # Command prompt
 
 __vcs_str() {
-  str=$(__git_ps1 " git:%s")
+  str=$(__git_ps1 " git: %s")
   if [ "x$str" == "x" ]; then
     str=$(hg branch 2> /dev/null | awk '{print $1}')
     if [ "x$str" == "x" ]; then
       return
     else
-      str=$(printf " hg:%s" "$str")
+      str=$(printf " hg: %s" "$str")
     fi
   fi
   echo "$str"
