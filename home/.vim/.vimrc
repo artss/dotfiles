@@ -130,6 +130,9 @@ endif
 highlight Trailing ctermbg=darkgray guibg=#00242f
 au BufNewFile,BufRead,WinEnter * let b:mtrailingws=matchadd('Trailing', '\s\+$', -1)
 
+""" remove trailing spaces
+au BufWritePre * %s/\s\+$//e
+
 """ hightlight long lines
 highlight ColorColumn guibg=#00242f
 au BufNewFile,BufRead,WinEnter * set colorcolumn=80
@@ -233,6 +236,11 @@ vnoremap > >gv
     let g:user_emmet_install_global = 0
     autocmd FileType html,html.twig,css EmmetInstall
     let g:user_emmet_leader_key='<C-Z>'
+    let g:user_emmet_settings = {
+    \    'javascript' : {
+    \        'extends' : 'jsx',
+    \    }
+    \}
 
 """ JsDoc
     let g:jsdoc_allow_input_prompt = 1
