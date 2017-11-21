@@ -23,11 +23,13 @@ filetype off
     Bundle 'honza/vim-snippets'
     Bundle 'scrooloose/nerdcommenter'
     Bundle 'Raimondi/delimitMate'
-    Bundle 'wavded/vim-stylus'
-    Bundle 'evidens/vim-twig'
+    "Bundle 'wavded/vim-stylus'
+    "Bundle 'evidens/vim-twig'
     Bundle 'krisajenkins/vim-pipe'
     Bundle 'vim-misc'
     Bundle 'xolox/vim-session'
+    "Bundle 'pangloss/vim-javascript'
+    "Bundle 'peitalin/vim-jsx-typescript'
 
     " vim/scripts repos
     "Bundle 'L9'
@@ -40,9 +42,9 @@ filetype off
 filetype plugin indent on
 syntax enable
 
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
 set expandtab
 
 set encoding=utf-8
@@ -135,7 +137,7 @@ au BufWritePre * %s/\s\+$//e
 
 """ hightlight long lines
 highlight ColorColumn guibg=#00242f
-au BufNewFile,BufRead,WinEnter * set colorcolumn=80
+au BufNewFile,BufRead,WinEnter * set colorcolumn=100
 
 """ selection
 set clipboard+=unnamed
@@ -242,6 +244,9 @@ vnoremap > >gv
     \    }
     \}
 
+" set filetypes as typescript.jsx
+"autocmd BufNewFile,BufRead *.tsx set filetype=typescript.jsx
+
 """ JsDoc
     let g:jsdoc_allow_input_prompt = 1
     let g:jsdoc_input_description = 1
@@ -284,8 +289,7 @@ vnoremap > >gv
     let g:UltiSnipsEditSplit = 'vertical'
 
 """ nerdcommenter
-    "nmap <c-c> <leader>c<space>
-    "vmap <c-c> <leader>c<space>
+    let g:NERDSpaceDelims = 1
     call SMap('<c-c>', '<leader>c<space>')
 
 """ startify
