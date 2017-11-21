@@ -9,6 +9,8 @@ linux=
 
 screen=
 
+screen-256color=
+
 [Midnight-Commander]
 preserve_uidgid=0
 show_backups=1
@@ -116,6 +118,13 @@ preallocate_space=0
 editor_group_undo=0
 skin=default
 
+editor_drop_selection_on_copy=1
+editor_cursor_after_inserted_block=0
+editor_state_full_filename=1
+editor_ask_filename_before_edit=0
+editor_filesize_threshold=64M
+editor_stop_format_chars=-+*\\,.;:&>
+
 [Layout]
 message_visible=0
 keybar_visible=0
@@ -148,6 +157,8 @@ autodetect_codeset=
 clipboard_store=
 clipboard_paste=
 
+spell_language=en
+
 [HotlistConfig]
 expanded_view_of_groups=0
 
@@ -172,6 +183,8 @@ simple_swap=false
 
 show_mini_info=true
 torben_fj_mode=false
+
+select_flags=6
 
 [FindFile]
 file_case_sens=true
