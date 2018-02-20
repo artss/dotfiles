@@ -123,6 +123,9 @@ if has('gui')
     if has('win32')
         "set guifont=Lucida_Console:h10:cRUSSIAN::
         set guifont=terminus-cp1251
+    elseif has('gui_macvim')
+        set guifont=Terminus\ (TTF):h12
+        set noantialias
     else
         set guifont=Terminus\ 9
     endif
@@ -302,8 +305,8 @@ let g:session_autoload = 'no'
 let g:session_autosave = 'yes'
 let g:session_command_aliases = 1
 
-nnoremap <leader>so :OpenSession 
-nnoremap <leader>ss :SaveSession 
+nnoremap <leader>so :OpenSession
+nnoremap <leader>ss :SaveSession
 nnoremap <leader>sd :DeleteSession<cr>
 nnoremap <leader>sc :CloseSession<cr>
 
