@@ -1,3 +1,74 @@
-snippet use "use strict"
-'use strict';
+snippet rfun "react component function"
+import React from 'react';
+
+export default function ${1}() {
+  return (
+    <div>
+      ${2}
+    </div>
+  );
+}
 endsnippet
+
+snippet rcls "react component class"
+import React, { PureComponent } from 'react';
+import PropTypes from 'prop-types';
+import cx from 'classnames';
+
+export default class ${1} extends PureComponent {
+  static propTypes = {
+  };
+
+  static defaultProps = {};
+
+  state = {};
+
+  render() {
+    return (
+      <div>
+        ${2}
+      </div>
+    );
+  }
+}
+endsnippet
+
+snippet rcont "react container class"
+import React, { PureComponent } from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import cx from 'classnames';
+
+class ${1} extends PureComponent {
+  static propTypes = {
+  };
+
+  static defaultProps = {};
+
+  state = {};
+
+  render() {
+    return (
+      <div>
+        ${2}
+      </div>
+    );
+  }
+}
+
+function mapStateToProps(state) {
+  return {};
+}
+
+function mapDispatchToProps(dispatch) {
+  return { actions: bindActionCreators({  }, dispatch) };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(${1});
+endsnippet
+
+snippet sets "setState"
+this.setState({ ${1}: ${2} });
+endsnippet
+
