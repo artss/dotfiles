@@ -11,7 +11,7 @@ alias grep='grep --color'
 # network
 alias wget='wget -c'
 
-alias less='most'
+#alias less='most'
 
 # some directories
 alias media='cd /media'
