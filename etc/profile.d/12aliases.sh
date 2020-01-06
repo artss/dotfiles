@@ -38,3 +38,5 @@ if [ "`id -u`" -eq 0 ]; then
         alias halt="echo 'If you really want to shutdown, use /sbin/halt directly.'"
         alias shutdown="echo 'If you really want to shutdown, use /sbin/shutdown directly.'"
 fi
+
+alias dcu='docker-compose up'
