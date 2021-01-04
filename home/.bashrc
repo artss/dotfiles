@@ -1,6 +1,7 @@
 source /etc/profile
 
 source $HOME/.nvm/nvm.sh
+nvm use default
 
 #case `tty` in 
 #    /dev/tty[1])
