@@ -1,0 +1,47 @@
+[push]
+	default = simple
+[credential]
+	helper = cache --timeout=86400
+
+[alias]
+ # logs
+ l = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short
+ lg='git log --graph --oneline --decorate --all'
+
+ a = add
+ ap = add -p
+ aa = add .
+ ac = !git add -A && git commit -m
+ c = commit --verbose
+ ca = commit -a --verbose
+ cm = commit -m
+ cam = commit -a -m
+ m = commit --amend --verbose
+
+ d = diff
+ ds = diff --stat
+ dc = diff --cached
+ a = add
+ ap = add -p
+ aa = add .
+ c = commit --verbose
+ ca = commit -a --verbose
+ cm = commit -m
+ cam = commit -a -m
+ m = commit --amend --verbose
+
+ d = diff
+ ds = diff --stat
+ dc = diff --cached
+
+ st = status -s
+ co = checkout
+ cb = checkout -b
+ # list branches sorted by last modified
+ b = "!git for-each-ref --sort='-authordate' --format='%(authordate)%09%(objectname:short)%09%(refname)' refs/heads | sed -e 's-refs/heads/--'"
+
+ pl = pull
+ ps = push
+
+ # list aliases
+ la = "!git config -l | grep alias | cut -c 7-"
