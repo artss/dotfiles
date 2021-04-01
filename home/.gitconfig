@@ -16,19 +16,8 @@
  ca = commit -a --verbose
  cm = commit -m
  cam = commit -a -m
- m = commit --amend --verbose
-
- d = diff
- ds = diff --stat
- dc = diff --cached
- a = add
- ap = add -p
- aa = add .
- c = commit --verbose
- ca = commit -a --verbose
- cm = commit -m
- cam = commit -a -m
- m = commit --amend --verbose
+ m = merge
+ rh = reset --hard
 
  d = diff
  ds = diff --stat
@@ -37,6 +26,8 @@
  st = status -s
  co = checkout
  cb = checkout -b
+ cm = checkout master
+
  # list branches sorted by last modified
  b = "!git for-each-ref --sort='-authordate' --format='%(authordate)%09%(objectname:short)%09%(refname)' refs/heads | sed -e 's-refs/heads/--'"
 
