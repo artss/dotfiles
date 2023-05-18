@@ -71,7 +71,7 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git docker docker-compose node npm nvm)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -102,3 +102,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 source ~/.nvm/nvm.sh
+
+alias mc='TERM=screen-256color SHELL=/usr/bin/zsh /usr/bin/mc -d -U'
+
+setopt no_share_history
