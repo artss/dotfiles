@@ -106,3 +106,4 @@ source ~/.nvm/nvm.sh
 alias mc='TERM=screen-256color SHELL=/usr/bin/zsh /usr/bin/mc -d -U'
 
 setopt no_share_history
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
