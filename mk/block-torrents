@@ -1,0 +1,26 @@
+# Удалим старые правила (если есть)
+:foreach i in=[/ip firewall filter find where comment~"(?i)bittorrent"] do={ /ip firewall filter remove $i }
+:foreach i in=[/ip firewall layer7-protocol find where name="bittorrent"] do={ /ip firewall layer7-protocol remove $i }
+
+# 1. L7 фильтр
+/ip firewall layer7-protocol
+add name=bittorrent regexp="^.*(get_peers|announce_peer|find_node|BitTorrent|BitTorrent protocol|peer_id=|.torrent|announce.php?passkey=|info_hash).*"
+
+# 2. Правила drop по L7 (TCP и UDP)
+/ip firewall filter
+add chain=forward protocol=tcp layer7-protocol=bittorrent action=drop comment="Block BitTorrent TCP"
+add chain=forward protocol=udp layer7-protocol=bittorrent action=drop comment="Block BitTorrent UDP"
+
+# 3. Блокировка типичных BitTorrent портов
+/ip firewall filter
+add chain=forward protocol=tcp dst-port=6881-6889,6969,51413 action=drop comment="Block BT TCP ports"
+add chain=forward protocol=udp dst-port=6881-6889,6969,51413 action=drop comment="Block BT UDP ports"
+
+# 4. Лимит соединений (Anti-P2P)
+# Пример: >100 одновременных соединений с одного IP
+/ip firewall filter
+add chain=forward connection-limit=100,32 action=drop comment="Block P2P flood (>100 conn/IP)"
+
+# 5. Отключим FastTrack (если есть)
+/ip firewall filter
+remove [find action=fasttrack-connection]

@@ -1,0 +1,35 @@
+# 1. Firewall rule (если ещё нет)
+# Удалим старое, если есть
+/ip firewall filter
+remove [find comment="Block Youtube"]
+
+# Добавим новое правило блокировки
+/ip firewall filter
+add chain=forward action=drop dst-address-list=youtube comment="Block Youtube"
+
+# 2. Скрипт для резолва доменов
+/system script
+add name=update-youtube-list policy=read,write,test source="\
+/ip firewall address-list remove [find list=youtube]
+:foreach domain in={\"www.youtube.com\";\"youtube.com\";\"googlevideo.com\";\"ytimg.com\";\"youtubei.googleapis.com\";\"yt3.ggpht.com\";\"manifest.googlevideo.com\"} do={\
+  :local resolvedIps [:resolve \$domain];
+  :foreach ip in=\$resolvedIps do={\
+    /ip firewall address-list add list=youtube address=\$ip timeout=1d comment=\$domain\
+  }\
+}\
+"
+
+# 3. Планировщик: обновлять список ежедневно
+/system scheduler
+add name="update_youtube_list_daily" interval=1d start-time=07:55:00 on-event="/system script run update-youtube-list"
+
+# 4. Планировщик: включить блокировку в 08:00
+/system scheduler
+add name="enable_youtube_block" start-time=08:00:00 interval=1d on-event="/ip firewall filter enable [find comment=\"Block Youtube\"]"
+
+# 5. Планировщик: отключить блокировку в 16:00
+/system scheduler
+add name="disable_youtube_block" start-time=16:00:00 interval=1d on-event="/ip firewall filter disable [find comment=\"Block Youtube\"]"
+
+# 6. Сразу запустим обновление
+/system script run update-youtube-list
